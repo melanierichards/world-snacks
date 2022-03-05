@@ -72,23 +72,4 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.setLibrary('md', markdownLibrary);
     */
-
-    // SHORTCODE - RESPONSIVE IMAGES
-    /*
-    eleventyConfig.addShortcode("responsiveImage", function(baseSrc, ext, max, alt, classes, link) {
-      let fullBaseSrc = '/assets/images/content/' + baseSrc;
-      var sources = '<source media="(min-width: 501px)" srcset="' + fullBaseSrc + '-m.' + ext + '">';
-      if (max !== 'm') {
-        sources = '<source media="(min-width: 801px)" srcset="' + fullBaseSrc + '-l.' + ext + '">' + sources;
-      }
-      if (max === 'xl') {
-        sources = '<source media="(min-width: 1201px)" srcset="' + fullBaseSrc + '-xl.' + ext + '">' + sources;
-      }
-      if (link) {
-        return `<div class="c-media ${classes}"><a href="${link}"><picture>${sources}<img src="${fullBaseSrc}-s.${ext}" alt="${alt}"></picture></a></div>`;
-      } else {
-        return `<div class="c-media ${classes}"><picture>${sources}<img src="${fullBaseSrc}-s.${ext}" alt="${alt}"></picture></div>`;
-      }
-    });
-    */
 };

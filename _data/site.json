@@ -1,10 +1,9 @@
 {
-  "domain": "my.melanie-richards.com",
-  "url": "https://my.melanie-richards.com",
-  "title": "",
-  "description": "",
+  "domain": "worldsnacks.melanie-richards.com",
+  "url": "https://worldsnacks.melanie-richards.com",
+  "title": "World Snacks",
+  "description": "My impressions of snacks from around the world",
   "images": "/assets/images",
   "imagesContent": "/assets/images/content",
-  "videosContent": "/assets/videos/content",
-  "email": ""
+  "videosContent": "/assets/videos/content"
 }

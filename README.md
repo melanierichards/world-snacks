@@ -1,20 +1,15 @@
-# Palindrome
+# World Snacks
 
-Personal boilerplate for Eleventy projects
+My impressions of snacks from around the world
 
-## Not Included
+## Tech Stack
 
-Heavier-lift techniques that may not be appropriate for every project, but can be referenced from another project:
-
-| Technique                  | Project with example         |
-| :------------------------- | :--------------------------- |
-| Netlify comment forms      | Fiber blog                   |
-| Paginating tagged items    | Personal website             |
-| Webmentions                | Personal website             |
+* [Eleventy](https://www.11ty.dev/)
+* [Contentful](https://www.contentful.com/)
 
 ## Setup Checklist
 
-* [ ] Update package.json with project details
+* [x] Update package.json with project details
 * [ ] Go thru eleventy.js and un-comment or delete utilities; move require statements to top of file
 * [ ] Update head.njk with any info for: RSS, social metadata, icons
 * [ ] Update images referenced in manifest.webmanifest
@@ -40,40 +35,9 @@ Heavier-lift techniques that may not be appropriate for every project, but can b
 | npm run lint:fix           | Run eslint and fix issues    |
 | npm run validate           | Run html-validate            |
 
-## Front-Matter
-
-```
----
-title: 
-date: 2021-##-##
-tags: ["posts", "foo", "bar"]
-featureSrc: (Omit "-m", which is added automatically)
-featureExt: 
-featureAlt: 
----
-```
-
 ## Media
 
-### Blog image sizes
-
-| Size | PX width |
-| ---: | -------: |
-| s    | 600      |
-| m    | 800      |
-| l    | 1200     |
-| xl   | 2000     |
-
-### Responsive image include
-
-Filename, extension, max size, alt text, classes:
-
-```
-{% responsiveImage "melanierichards-", "jpg", "xl", "Alt", "" %}
-```
-
-* Max size can be `l` or `xl`
-* Classes can include `c-media--limit-width`
+Snack image size: 800px wide
 
 ## Reference
 
