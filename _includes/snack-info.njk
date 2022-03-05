@@ -1,0 +1,30 @@
+<article>
+  {% if context == 'snack' %}
+    <h1>{{ snack.name }}</h1>
+  {% else %}
+    <h2>{{ snack.name }}</h2>
+  {% endif %}
+
+  {% if snack.image %}
+    <img src="{{ snack.image.fields.file.url }}" width="{{ snack.image.fields.file.details.image.width }}" height="{{ snack.image.fields.file.details.image.height }}" loading="lazy" decoding="async" />
+  {% endif %}
+  <p>{{ snack.typeOfSnack.fields.type }} from {{ snack.countryOfOrigin.fields.countryName }}</p>
+
+  <dl>
+    <dt>Rating</dt>
+    <dd>{{ snack.rating }} out of 5</dd>
+    <dt>Source</dt>
+    <dd>{% richTextIfy snack.source %}</dd>
+  </dl>
+
+  {% richTextIfy snack.comments %}
+  <p>Written on {{ snack.date | prettyDate }}</p>
+
+  {% if context != 'snack' %}
+    <a href="/snack/{{ snack.name | slug | url }}">Permalink for {{snack.name}}</a>
+  {% endif %}
+
+  {% if snack.buyOn and snack.buyLink %}
+    <a href="{{ snack.buyLink }}">Buy from {{ snack.buyOn }}</a>
+  {% endif %}
+</article>

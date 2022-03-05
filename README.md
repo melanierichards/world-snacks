@@ -7,6 +7,13 @@ My impressions of snacks from around the world
 * [Eleventy](https://www.11ty.dev/)
 * [Contentful](https://www.contentful.com/)
 
+## Environment Variables
+
+Requires the following keys, which can be obtained in Contentful through Settings > API Keys:
+
+* CTFL_SPACE: the token for this Contentful space
+* CTFL_ACCESSTOKEN: use the API key for published content
+
 ## Setup Checklist
 
 * [x] Update package.json with project details

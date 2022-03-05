@@ -4,3 +4,10 @@ layout: layouts/global.njk
 
 <h1>{{ title }}</h1>
 {{ content | safe }}
+
+<ul>
+  {% for snack in snacks | reverse %}
+    {% set context = 'home' %}
+    {% include 'snack-info.njk' %}
+  {% endfor %}
+</ul>

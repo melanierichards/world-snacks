@@ -1,0 +1,18 @@
+---
+pagination:
+  data: snacks
+  size: 1
+  alias: snack
+  addAllPagesToCollections: true
+permalink: "/snack/{{ snack.name | slug }}/"
+tags: "snack"
+layout: layouts/snack.njk
+
+eleventyComputed:
+  title: "{{ snack.name}}"
+
+---
+
+<h1>
+  {{ snack.name }}
+</h1>
