@@ -1,0 +1,14 @@
+---
+pagination:
+  data: countries
+  size: 1
+  alias: country
+  addAllPagesToCollections: true
+permalink: "/country/{{ country.countryName | slug }}/"
+tags: "country"
+layout: layouts/country.njk
+
+eleventyComputed:
+  title: "{{ country.countryName }}"
+
+---
