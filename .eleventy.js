@@ -33,6 +33,26 @@ module.exports = function (eleventyConfig) {
         return DateTime.fromJSDate(value, {zone: 'utc'}).toFormat('MMM dd, yyyy');
       });
 
+    // LIMIT ARRAY
+    eleventyConfig.addFilter("limit", function (arr, limit) {
+      return arr.slice(0, limit);
+    });
+
+    // OFFSET ARRAY
+    eleventyConfig.addFilter("offset", function (arr, limit) {
+      return arr.slice(limit + 1);
+    });
+
+  // COUNTRIES
+
+    // FILTER SNACKS BY COUNTRY
+    eleventyConfig.addFilter("filterByCountry", function(snacks, country) {
+      snacks = snacks.filter(snack => {
+        return snack.countryOfOrigin.fields.countryName.includes(country);
+      });
+      return snacks;
+    });
+
   // BLOG
 
     // RSS FEED
