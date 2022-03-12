@@ -1,0 +1,22 @@
+---
+layout: layouts/global.njk
+---
+
+<h1>{{ country.countryName }}</h1>
+
+<h2>Recent Snacks</h2>
+{% set snacksInCountry = snacks | filterByCountry(country.countryName) | reverse %}
+{% for snack in snacksInCountry | limit(5) %}
+  {% set context = 'country' %}
+  {% include 'snack-info.njk' %}
+{% endfor %}
+
+{% if snacksInCountry.length > 5 %}
+  <h2>More Treats</h2>
+  <ul>
+    {% for snack in snacksInCountry | offset(5) %}
+      {% set context = 'country' %}
+      {% include 'snack-simple-listing.njk' %}
+    {% endfor %}
+  </ul>
+{% endif %}

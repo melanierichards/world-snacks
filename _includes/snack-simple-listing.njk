@@ -1,0 +1,7 @@
+<li>
+  <a href="/snack/{{ snack.name | slug | url }}">
+    {{ snack.typeOfSnack.fields.type }}
+    {{snack.name}}
+  </a>
+  {{ snack.rating }} out of 5
+</li>
