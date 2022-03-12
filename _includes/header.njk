@@ -1,1 +1,9 @@
-<header role="banner" class="site-header"></header>
+<header role="banner" class="site-header">
+  {% if slug == 'home' %}
+    <h1>
+      <a href="/">World Snacks</a>
+    </h1>
+  {% else %}
+    <a href="/">World Snacks</a>
+  {% endif %}
+</header>

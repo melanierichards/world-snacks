@@ -5,7 +5,7 @@ const client = contentful.createClient({
 });
 
 module.exports = function () {
-  return client.getEntries({ content_type: 'snack', order: 'sys.createdAt' })
+  return client.getEntries({ content_type: 'snack', order: 'sys.updatedAt' })
     .then(function (response) {
       const snack = response.items
         .map(function (snack) {

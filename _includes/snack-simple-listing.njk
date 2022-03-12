@@ -3,5 +3,7 @@
     {{ snack.typeOfSnack.fields.type }}
     {{snack.name}}
   </a>
-  {{ snack.rating }} out of 5
+  {% if context != '5-star' %}
+    {{ snack.rating }} out of 5
+  {% endif %}
 </li>

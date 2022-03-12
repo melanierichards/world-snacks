@@ -43,6 +43,16 @@ module.exports = function (eleventyConfig) {
       return arr.slice(limit + 1);
     });
 
+  // HOME
+
+    // FILTER TO 5-STAR SNACKS
+    eleventyConfig.addFilter("fiveStarSnacks", function(snacks) {
+      snacks = snacks.filter(snack => {
+        return snack.rating === 5;
+      });
+      return snacks;
+    });
+
   // COUNTRIES
 
     // FILTER SNACKS BY COUNTRY

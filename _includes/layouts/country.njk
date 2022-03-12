@@ -6,16 +6,15 @@ layout: layouts/global.njk
 
 <h2>Recent Snacks</h2>
 {% set snacksInCountry = snacks | filterByCountry(country.countryName) | reverse %}
-{% for snack in snacksInCountry | limit(5) %}
+{% for snack in snacksInCountry | limit(10) %}
   {% set context = 'country' %}
   {% include 'snack-info.njk' %}
 {% endfor %}
 
-{% if snacksInCountry.length > 5 %}
+{% if snacksInCountry.length > 10 %}
   <h2>More Treats</h2>
   <ul>
-    {% for snack in snacksInCountry | offset(5) %}
-      {% set context = 'country' %}
+    {% for snack in snacksInCountry | offset(10) %}
       {% include 'snack-simple-listing.njk' %}
     {% endfor %}
   </ul>
