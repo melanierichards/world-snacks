@@ -11,3 +11,12 @@ layout: layouts/global.njk
     {% include 'snack-info.njk' %}
   {% endfor %}
 </ul>
+
+<h2>Browse by country</h2>
+<ul>
+  {% for country in countries %}
+    <li>
+      <a href="/country/{{ country.countryName | slug }}/">{{ country.countryName }}</a>
+    </li>
+  {% endfor %}
+</ul>
