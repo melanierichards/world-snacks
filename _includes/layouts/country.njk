@@ -11,11 +11,12 @@ layout: layouts/global.njk
   {% include 'snack-info.njk' %}
 {% endfor %}
 
-<h2>More Treats</h2>
-
-<ul>
-  {% for snack in snacksInCountry | offset(5) %}
-    {% set context = 'country' %}
-    {% include 'snack-simple-listing.njk' %}
-  {% endfor %}
-</ul>
+{% if snacksInCountry.length > 5 %}
+  <h2>More Treats</h2>
+  <ul>
+    {% for snack in snacksInCountry | offset(5) %}
+      {% set context = 'country' %}
+      {% include 'snack-simple-listing.njk' %}
+    {% endfor %}
+  </ul>
+{% endif %}
