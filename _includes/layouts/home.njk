@@ -2,21 +2,13 @@
 layout: layouts/global.njk
 ---
 
-<h1>{{ title }}</h1>
-{{ content | safe }}
+<div class="l-section l-section--pad">
+  <p class="l-contain | site-tagline">{{ tagline }}</p>
+</div>
 
-<ul>
+<div class="l-section">
   {% for snack in snacks | reverse %}
     {% set context = 'home' %}
-    {% include 'snack-info.njk' %}
+    {% include 'snack-item.njk' %}
   {% endfor %}
-</ul>
-
-<h2>Browse by country</h2>
-<ul>
-  {% for country in countries %}
-    <li>
-      <a href="/country/{{ country.countryName | slug }}/">{{ country.countryName }}</a>
-    </li>
-  {% endfor %}
-</ul>
+</div>

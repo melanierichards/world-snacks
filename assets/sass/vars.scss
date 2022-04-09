@@ -1,0 +1,66 @@
+/*
+ *  VARIABLES
+ *  =============================================
+ */
+
+/*
+ *  BREAKPOINTS
+ *  ---------------------------------------------
+ */
+
+$bp-s: 40rem;
+$bp-m: 48rem;
+$bp-l: 64rem;
+$bp-xl: 108rem;
+$bp-xxl: 125rem;
+
+/*
+ *  SPACING
+ *  ---------------------------------------------
+ */
+
+:root {
+  --space-none: 0; /* Doing this as a custom prop so non-supporting browsers ignore it */
+  --space-xxxs: .25rem;
+  --space-xxs: .5rem;
+  --space-xs: 1rem;
+  --space-s: 1.5rem;
+  --space-m: 2rem;
+  --space-l: 4rem;
+  --space-xl: 6rem;
+  --space-col-gap: var(--space-s);
+  --space-contain: var(--space-s);
+  --space-section: var(--space-l);
+  --space-subsection: var(--space-m);
+}
+
+@media (min-width: $bp-s) {
+  :root {
+    --space-contain: var(--space-l);
+    --space-section: var(--space-xl);
+    --space-subsection: var(--space-l);
+  }
+}
+
+@media (min-width: $bp-m) {
+  :root {
+    --space-col-gap: var(--space-m);
+    --space-contain: var(--space-xl);
+  }
+}
+
+/*
+ *  COLORS
+ *  ---------------------------------------------
+ */
+
+:root {
+  --color-banner-bg: papayawhip;
+  --color-body-bg: #fff;
+  --color-body-text: #6b6b6b;
+  --color-header: #000;
+  --color-meta-text: #777;
+  --color-placeholder-bg: #dedede;
+  --color-placeholder-text: #6b6b6b;
+  --color-subtle-header-text: #6b6b6b;
+}

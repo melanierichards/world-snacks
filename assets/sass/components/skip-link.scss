@@ -1,0 +1,31 @@
+/*
+ *  SKIP LINKS
+ *  =============================================
+ */
+
+.c-skip-link:link, .c-skip-link:visited {
+  position: absolute;
+  padding: var(--space-xxxs);
+
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+
+  font-size: .875em;
+}
+
+.c-skip-link:focus {
+  clip: auto;
+  width: auto;
+  height: auto;
+  overflow: auto;
+
+  outline-offset: 2px;
+}
+
+.c-skip-link--main {
+  top: var(--space-xxs);
+  left: var(--space-xxs);
+}

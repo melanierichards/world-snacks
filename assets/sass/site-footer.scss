@@ -1,0 +1,30 @@
+/*
+ *  SITE FOOTER
+ *  =============================================
+ */
+
+ .site-footer__pages,
+ .site-footer__browse-by-section {
+  border-radius: .5rem;
+  background-color: var(--color-body-bg);
+}
+
+.site-footer__pages {
+  padding: var(--space-xs) var(--space-s);
+}
+
+.site-footer__browse-by-section {
+  margin-top: var(--space-col-gap);
+  padding: var(--space-s);
+}
+
+@media (min-width: $bp-m) {
+  .site-footer__pages {
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: var(--space-xxs) var(--space-xs);
+    }
+  }
+}

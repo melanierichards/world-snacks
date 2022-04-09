@@ -2,9 +2,9 @@
 layout: layouts/global.njk
 ---
 
-{% set context = 'snack' %}
----
-layout: layouts/global.njk
----
+<div class="l-section l-section--pad">
+  <h1>{{ snack.name }}</h1>
+</div>
 
-{% include 'snack-info.njk' %}
+{% set context = 'snack' %}
+{% include 'snack-item.njk' %}

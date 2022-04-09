@@ -1,1 +1,31 @@
-<footer role="contentinfo" class="site-footer"></footer>
+<footer role="contentinfo" class="l-section l-section--pad | site-footer">
+  <nav class="l-contain" aria-labelledby="site-footer__heading">
+    <h2 class="u-vis-hidden" id="site-footer__heading">Site Navigation</h2>
+    <ul class="u-simple-list | site-footer__pages">
+      <li>
+        <a href="/">Recent Snacks</a>
+      </li>
+      <li>
+        <a href="/about/">About World Snacks</a>
+      </li>
+      <li>
+        <a href="/suggest/">Suggest a Snack</a>
+      </li>
+    </ul>
+    <div class="l-grid">
+      <div class="l-grid__half | site-footer__browse-by-section">
+        <h3>Browse by country</h3>
+        <ul class="u-simple-list">
+          {% for country in countries %}
+            <li>
+              <a href="/country/{{ country.countryName | slug }}/">{{ country.countryName }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="l-grid__half | site-footer__browse-by-section">
+        <h3>Browse by snack type</h3>
+      </div>
+    </div>
+  </nav>
+</footer>
