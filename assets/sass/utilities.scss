@@ -1,0 +1,39 @@
+/*
+ *  UTILITIES
+ *  Utility classes (.u-*)
+ *  =============================================
+ */
+
+/*
+ *	VISUALLY HIDE TEXT
+ *  Continue exposing to assistive tech
+ *	---------------------------------------------
+ */
+
+.u-vis-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute !important;
+}
+
+.u-vis-hidden + * {
+  margin-top: 0;
+}
+
+/*
+ *	LIST VARIANTS
+ *	---------------------------------------------
+ */
+
+.u-simple-list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+
+  li + li {
+    margin-top: var(--space-xxs);
+  }
+}

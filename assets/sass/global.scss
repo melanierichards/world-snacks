@@ -1,17 +1,28 @@
 /*
+<<<<<<< HEAD
  *	GLOBALS
+=======
+ *  GLOBALS
+ *  .l-* classes: layout.scss
+>>>>>>> 0ada08856da324d5ce89943c4e535a735802353d
  *  =============================================
  */
 
 /*
+<<<<<<< HEAD
  *	GLOBAL STYLES
  *	---------------------------------------------
+=======
+ *  LOVE THE CASCADE
+ *  ---------------------------------------------
+>>>>>>> 0ada08856da324d5ce89943c4e535a735802353d
  */
 
 * {
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 html {
   padding: 4em;
   max-width: 75em;
@@ -24,6 +35,50 @@ body {
 }
 
 img {
+=======
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-color: var(--color-body-bg);
+  color: var(--color-body-text);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  color: var(--color-header);
+}
+
+p, ul, ol {
+  margin: var(--space-none);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-xxs) var(--space-xs);
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 0;
+}
+
+img {
+  display: block;
+>>>>>>> 0ada08856da324d5ce89943c4e535a735802353d
   max-width: 100%;
   height: auto;
 }

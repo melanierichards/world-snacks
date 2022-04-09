@@ -2,21 +2,27 @@
 layout: layouts/global.njk
 ---
 
-<h1>{{ country.countryName }}</h1>
+<div class="l-section l-section--pad">
+  <h1>{{ country.countryName }}</h1>
+</div>
 
-<h2>Recent Snacks</h2>
-{% set snacksInCountry = snacks | filterByCountry(country.countryName) | reverse %}
-{% for snack in snacksInCountry | limit(5) %}
-  {% set context = 'country' %}
-  {% include 'snack-info.njk' %}
-{% endfor %}
+<section class="l-section" aria-labelledby="recent-heading">
+  <h2 class="c-subtle-header" id="recent-heading">Recent Snacks</h2>
+  {% set snacksInCountry = snacks | filterByCountry(country.countryName) | reverse %}
+  {% for snack in snacksInCountry | limit(5) %}
+    {% set context = 'country' %}
+    {% include 'snack-item.njk' %}
+  {% endfor %}
+</section>
 
 {% if snacksInCountry.length > 5 %}
-  <h2>More Treats</h2>
-  <ul>
-    {% for snack in snacksInCountry | offset(5) %}
-      {% set context = 'country' %}
-      {% include 'snack-simple-listing.njk' %}
-    {% endfor %}
-  </ul>
+  <section class="l-contain l-section" aria-labelledby="more-heading">
+    <h2 class="c-subtle-header" id="more-heading">More Treats</h2>
+    <ul class="l-subsection | u-simple-list">
+      {% for snack in snacksInCountry | offset(5) %}
+        {% set context = 'country' %}
+        {% include 'snack-simple-listing.njk' %}
+      {% endfor %}
+    </ul>
+  </section>
 {% endif %}
