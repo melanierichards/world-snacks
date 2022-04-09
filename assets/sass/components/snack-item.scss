@@ -1,0 +1,62 @@
+/*
+ *  SNACK ITEM
+ *  =============================================
+ */
+
+.c-snack-item__placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  aspect-ratio: 2 / 1;
+  padding: var(--space-m);
+  text-align: center;
+  font-size: 8em;
+  background-color: var(--color-placeholder-bg);
+  color: var(--color-placeholder-text);
+}
+
+.c-snack-item__info {
+  margin-top: var(--space-xs);
+}
+
+.c-snack-item__info > * + * {
+  margin-top: var(--space-s);
+}
+
+.c-snack-item__type {
+  margin-top: var(--space-xxs);
+}
+
+@media (min-width: $bp-m) {
+  .c-snack-item {
+    --space-snack-gutter: var(--space-l);
+
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    column-gap: var(--space-snack-gutter);
+    align-items: start;
+  }
+
+  .c-snack-item__placeholder {
+    aspect-ratio: 1 / 1;
+  }
+
+  .c-snack-item__info {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: $bp-l) {
+  .c-snack-item {
+    --space-snack-gutter: var(--space-xl);
+    grid-template-columns: 40% 1fr;
+    align-items: center;
+  }
+}
+
+@media (min-width: $bp-xl) {
+  .c-snack-item {
+    grid-template-columns: 50% 1fr;
+    align-items: center;
+  }
+}
