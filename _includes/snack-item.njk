@@ -1,6 +1,6 @@
 <article class="l-contain l-subsection | c-snack-item">
   {% if snack.image %}
-    <img class="c-snack-item__image" src="{{ snack.image.fields.file.url }}" width="{{ snack.image.fields.file.details.image.width }}" height="{{ snack.image.fields.file.details.image.height }}" loading="lazy" decoding="async" />
+    <img class="c-snack-item__image" src="{{ snack.image.fields.file.url }}" width="{{ snack.image.fields.file.details.image.width }}" height="{{ snack.image.fields.file.details.image.height }}" loading="lazy" decoding="async" alt="{{ snack.image.fields.description }}" />
   {% else %}
     <div class="c-snack-item__placeholder">
       <span>?</span>
