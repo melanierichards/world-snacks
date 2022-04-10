@@ -9,7 +9,7 @@ module.exports = function () {
     .then(function (response) {
       const snack = response.items
         .map(function (snack) {
-          snack.fields.date = new Date(snack.sys.updatedAt);
+          snack.fields.date = new Date(snack.sys.createdAt);
           return snack.fields;
         });
       return snack;
