@@ -53,6 +53,16 @@ module.exports = function (eleventyConfig) {
       return snacks;
     });
 
+  // TYPES
+
+    // FILTER SNACKS BY TYPE
+    eleventyConfig.addFilter("filterByType", function(snacks, type) {
+      snacks = snacks.filter(snack => {
+        return snack.typeOfSnack.fields.type.includes(type);
+      });
+      return snacks;
+    });
+
   // BLOG
 
     // RSS FEED

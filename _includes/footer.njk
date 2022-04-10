@@ -25,6 +25,13 @@
       </div>
       <div class="l-grid__half | site-footer__browse-by-section">
         <h3>Browse by snack type</h3>
+        <ul class="u-simple-list">
+          {% for type in types %}
+            <li>
+              <a href="/type/{{ type.type | slug }}/">{{ type.type }}</a>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </nav>

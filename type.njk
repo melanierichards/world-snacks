@@ -1,0 +1,14 @@
+---
+pagination:
+  data: types
+  size: 1
+  alias: type
+  addAllPagesToCollections: true
+permalink: "/type/{{ type.type | slug }}/"
+tags: "type"
+layout: layouts/type.njk
+
+eleventyComputed:
+  title: "{{ type.type }}"
+  
+---
