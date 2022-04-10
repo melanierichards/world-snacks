@@ -45,8 +45,24 @@ $bp-xxl: 125rem;
 @media (min-width: $bp-m) {
   :root {
     --space-col-gap: var(--space-m);
+  }
+}
+
+@media (min-width: $bp-l) {
+  :root {
+    --space-col-gap: var(--space-m);
     --space-contain: var(--space-xl);
   }
+}
+
+/*
+ *  FONTS
+ *  ---------------------------------------------
+ */
+
+:root {
+  --font-serif: 'Fraunces', Garamond, Georgia, 'Times New Roman', Times, serif;
+  --font-sans-serif: 'League Spartan', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 /*
@@ -58,9 +74,17 @@ $bp-xxl: 125rem;
   --color-banner-bg: papayawhip;
   --color-body-bg: #fff;
   --color-body-text: #6b6b6b;
-  --color-header: #000;
+  --color-focus-outline: #F14E76;
+  --color-link-border: #8D85C6;
+  --color-link-hover-bg: #E3E1F1;
+  --color-link-text: #383168;
+  --color-header-text: #53499C;
+  --color-masthead-text: #D91142;
   --color-meta-text: #777;
-  --color-placeholder-bg: #dedede;
-  --color-placeholder-text: #6b6b6b;
+  --color-placeholder-bg: #FEE7EC;
+  --color-placeholder-text: #D91142;
+  --color-selection-bg: #75E2F0;
+  --color-selection-text: #000;
+  --color-site-footer-bg: #E3E1F1;
   --color-subtle-header-text: #6b6b6b;
 }

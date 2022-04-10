@@ -10,9 +10,14 @@
   aspect-ratio: 2 / 1;
   padding: var(--space-m);
   text-align: center;
-  font-size: 8em;
+  font: 8em/1 var(--font-serif);
+  font-variation-settings: "wght" 900, "SOFT" 100,;
   background-color: var(--color-placeholder-bg);
   color: var(--color-placeholder-text);
+}
+
+.c-snack-item__image {
+  margin: 0 auto;
 }
 
 .c-snack-item__info {

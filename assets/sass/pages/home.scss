@@ -4,7 +4,21 @@
  */
 
 .site-tagline {
+  max-width: 16em;
   text-align: center;
-  font-size: 4rem;
-  color: var(--color-header);
+  font: 2rem/1.1 var(--font-serif);
+  font-variation-settings: "wght" 900, "SOFT" 100, "WONK" 1;
+  color: var(--color-masthead-text);
+}
+
+@media (min-width: $bp-s) {
+  .site-tagline {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: $bp-m) {
+  .site-tagline {
+    font-size: 4rem;
+  }
 }

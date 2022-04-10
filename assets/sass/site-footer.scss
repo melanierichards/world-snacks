@@ -3,6 +3,10 @@
  *  =============================================
  */
 
+.site-footer {
+  background-color: var(--color-site-footer-bg);
+}
+
  .site-footer__pages,
  .site-footer__browse-by-section {
   border-radius: .5rem;

@@ -5,8 +5,7 @@
 
 .c-subtle-header {
   text-align: center;
-  font-size: 1.125rem;
-  font-weight: 600;
+  font: 700 1.125rem/1 var(--font-sans-serif);
   text-transform: uppercase;
   letter-spacing: .02em;
   color: var(--color-subtle-header-text);

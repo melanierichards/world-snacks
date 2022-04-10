@@ -13,6 +13,7 @@
 
 /* Applies margin to contained flow content */
 .l-flow {
+  font-size: 1.125em;
   line-height: 1.3;
 
   * + p, * + ul, * + ol {
@@ -20,9 +21,15 @@
   }
 }
 
+@media (min-width: $bp-s) {
+  .l-flow {
+    font-size: 1.25rem;
+  }
+}
+
 @media (min-width: $bp-l) {
   .l-flow {
-    font-size: 1.125rem;
+    font-size: 1.375rem;
   }
 }
 

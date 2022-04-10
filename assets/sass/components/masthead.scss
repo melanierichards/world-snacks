@@ -1,0 +1,15 @@
+/*
+ *  MASTHEAD
+ *  =============================================
+ */
+
+.c-masthead {
+  text-align: center;
+  color: var(--color-masthead-text);
+}
+
+.c-masthead__title {
+  margin: 0 auto;
+  max-width: 32em;
+  color: inherit;
+}

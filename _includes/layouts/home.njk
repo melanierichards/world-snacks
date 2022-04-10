@@ -2,13 +2,14 @@
 layout: layouts/global.njk
 ---
 
-<div class="l-section l-section--pad">
-  <p class="l-contain | site-tagline">{{ tagline }}</p>
+<div class="l-section l-section--pad | c-masthead">
+  <p class="l-contain | c-masthead__title | site-tagline">{{ tagline }}</p>
 </div>
 
-<div class="l-section">
+<section class="l-section" aria-labelledby="recent-heading">
+  <h2 class="c-subtle-header" id="recent-heading">Recent Snacks</h2>
   {% for snack in snacks | reverse %}
     {% set context = 'home' %}
     {% include 'snack-item.njk' %}
   {% endfor %}
-</div>
+</section>
