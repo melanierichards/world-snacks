@@ -1,0 +1,53 @@
+{% if pagination.href.next or pagination.href.previous %}
+  <nav class="l-contain l-section | c-pagination" aria-labelledby="pagination-heading">
+    <h2 class="u-vis-hidden" id="pagination-heading">
+      {% if context == 'country' %}
+        Browse countries
+      {% elseif context == 'type' %}
+        Browse snack types
+      {% else %}
+        Browse more reviews
+      {% endif %}
+    </h2>
+    <div class="c-pagination__links">
+      {% if pagination.href.next %}
+        <a class="c-pagination__older" href="{{ pagination.href.next | url }}">
+          <svg focusable="false" aria-hidden="true" class="c-pagination__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M1.2 13.79 21 23.76A2 2 0 0 0 23.9 22V2A2 2 0 0 0 21 .24L1.2 10.21a2 2 0 0 0 0 3.58Z" fill="#f4e4ae"/><circle cx="15.9" cy="7" r="1" fill="#865b26" opacity=".75"/><circle cx="18.4" cy="9.5" r=".5" fill="#865b26" opacity=".75"/><circle cx="19.9" cy="18" r="1" fill="#865b26" opacity=".75"/><circle cx="6.4" cy="12" r=".5" fill="#865b26" opacity=".75"/><circle cx="13.4" cy="12.5" r="1" fill="#865b26" opacity=".75"/></svg>
+          {% if context == 'snack' %}
+            <span>Older review</span>
+          {% elseif context == 'country'%}
+            {% set nextSlug = pagination.href.next | slug | replace('country', '') %}
+            {% set nextName = nextSlug | replace('-', ' ') %}
+            <span>{{ nextName }}</span>
+          {% elseif context == 'type' %}
+            {% set nextSlug = pagination.href.next | slug | replace('type', '') %}
+            {% set nextWithAmp = nextSlug | replace('and', '&') %}
+            {% set nextName = nextWithAmp | replace('-', ' ') %}
+            <span>{{ nextName }}</span>
+          {% else %}
+            <span>Older reviews</span>
+          {% endif %}
+        </a>
+      {% endif %}
+      {% if pagination.href.previous %}
+        <a class="c-pagination__newer" href="{{ pagination.href.previous | url }}">
+          {% if context == 'snack' %}
+            <span>Newer review</span>
+          {% elseif context == 'country' %}
+            {% set prevSlug = pagination.href.previous | slug | replace('country', '') %}
+            {% set prevName = prevSlug | replace('-', ' ') %}
+            <span>{{ prevName }}</span>
+          {% elseif context == 'type' %}
+            {% set prevSlug = pagination.href.previous | slug | replace('type', '') %}
+            {% set prevWithAmp = prevSlug | replace('-and-', '-&-') %}
+            {% set prevName = prevWithAmp | replace('-', ' ') %}
+            <span>{{ prevName }}</span>
+          {% else %}
+            <span>Newer reviews</span>
+          {% endif %}
+          <svg focusable="false" aria-hidden="true" class="c-pagination__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M22.8 13.79 3 23.76A2 2 0 0 1 .1 22V2A2 2 0 0 1 3 .24l19.81 10a2 2 0 0 1-.01 3.55Z" fill="#f4e4ae"/><circle cx="8.1" cy="7" r="1" fill="#865b26" opacity=".75"/><circle cx="5.6" cy="9.5" r=".5" fill="#865b26" opacity=".75"/><circle cx="4.1" cy="18" r="1" fill="#865b26" opacity=".75"/><circle cx="17.6" cy="12" r=".5" fill="#865b26" opacity=".75"/><circle cx="10.6" cy="12.5" r="1" fill="#865b26" opacity=".75"/></svg>
+        </a>
+      {% endif %}
+    </div>
+  </nav>
+{% endif %}

@@ -1,5 +1,10 @@
 ---
 layout: layouts/global.njk
+pagination:
+  data: snacks
+  size: 10
+  alias: snacks
+  reverse: true
 ---
 
 <div class="l-section l-section--pad | c-masthead">
@@ -7,9 +12,11 @@ layout: layouts/global.njk
 </div>
 
 <section class="l-section" aria-labelledby="recent-heading">
-  <h2 class="c-subtle-header" id="recent-heading">Recent Snacks</h2>
-  {% for snack in snacks | reverse %}
+  <h2 class="c-subtle-header" id="recent-heading">Recent Snack Reviews</h2>
+  {% for snack in snacks %}
     {% set context = 'home' %}
     {% include 'snack-item.njk' %}
   {% endfor %}
 </section>
+
+{% include 'pagination.njk' %}

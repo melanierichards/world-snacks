@@ -1,0 +1,95 @@
+/*
+ *  =============================================
+ *  COMPONENT: PAGINATION
+ *  =============================================
+ */
+
+.c-pagination {
+  text-align: center;
+
+  a:link, a:visited {
+    display: block;
+    position: relative;
+    padding: var(--space-xxs);
+    border-bottom: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    line-height: 1;
+
+    span {
+      border-bottom: 2px solid transparent;
+      vertical-align: middle;
+      transition: border-bottom-color 200ms ease-in;
+    }
+  }
+
+  a:hover {
+    background-color: transparent;
+
+    span {
+      border-bottom-color: currentColor;
+    }
+  }
+}
+
+.c-pagination__links {
+  margin-top: var(--space-m);
+}
+
+.c-pagination__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px .5rem 0 0;
+  width: 1.5rem;
+  height: auto;
+  transition: transform 200ms ease-in;
+}
+
+.c-pagination__older {
+  &:hover svg {
+    transform: translate(-.25rem);
+  }
+}
+
+.c-pagination__newer {
+  .c-pagination__icon {
+    margin: -2px 0 0 .5rem;
+  }
+
+  &:hover svg {
+    transform: translate(.25rem);
+  }
+}
+
+@supports (display: grid) {
+  .c-pagination__links {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: var(--space-m);
+    column-gap: var(--space-m);
+    justify-content: space-between;
+  
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 2px);
+      width: 4px;
+      height: 100%;
+      border-radius: 2px;
+      background-color: var(--color-site-footer-bg);
+      content: '';
+    }
+  }
+
+  .c-pagination__older {
+    justify-self: end;
+  }
+
+  .c-pagination__newer {
+    grid-column: -2;
+    justify-self: start;
+  }
+}

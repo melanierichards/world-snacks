@@ -7,6 +7,7 @@ pagination:
 permalink: "/country/{{ country.countryName | slug }}/"
 tags: "country"
 layout: layouts/country.njk
+context: country
 
 eleventyComputed:
   title: "{{ country.countryName }}"

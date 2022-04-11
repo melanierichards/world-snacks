@@ -6,5 +6,6 @@ layout: layouts/global.njk
   <h1 class="c-masthead__title">{{ snack.name }}</h1>
 </div>
 
-{% set context = 'snack' %}
 {% include 'snack-item.njk' %}
+
+{% include 'pagination.njk' %}
