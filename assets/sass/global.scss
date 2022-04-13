@@ -40,7 +40,7 @@ body {
 a:link, a:visited {
   border-bottom: 2px solid var(--color-link-border);
   text-decoration: none;
-  background-color: var(--color-body-bg);
+  background-color: transparent;
   color: var(--color-link-text);
   transition: background-color 200ms ease-in, border-bottom-color 200ms ease-in;
 }

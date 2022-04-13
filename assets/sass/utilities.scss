@@ -24,6 +24,18 @@
 }
 
 /*
+ *	TEXT TRANSFORMATIONS
+ *	---------------------------------------------
+ */
+
+.u-uppercase {
+  font-weight: 700;
+  font-size: .9375em;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+/*
  *	LIST VARIANTS
  *	---------------------------------------------
  */

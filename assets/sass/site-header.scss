@@ -3,6 +3,43 @@
  *  =============================================
  */
 
- .site-header {
-   background-color: var(--color-banner-bg);
- }
+.site-header {
+  padding-top: var(--space-m);
+  background-color: var(--color-banner-bg);
+  text-align: center;
+}
+
+.site-header__logo {
+  a:link, a:visited {
+    border-bottom: 0;
+    background-color: transparent;
+  }
+
+  img {
+    display: inline-block;
+    transition: transform 200ms ease-in;
+  }
+
+  a:hover {
+    img {
+      transform: scale(1.125);
+    }
+  }
+}
+
+.site-header__pages {
+  li, li + li {
+    display: inline-block;
+    margin: var(--space-s) var(--space-xxs) 0;
+  }
+
+  a:link, a:visited {
+    border-bottom-color: var(--color-header-link-border);
+    color: var(--color-header-link-text);
+  }
+
+  a:hover {
+    background-color: transparent;
+    border-bottom-color: currentColor;
+  }
+}

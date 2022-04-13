@@ -1,1 +1,28 @@
-<header role="banner" class="site-header"></header>
+<header role="banner" class="site-header">
+  <div class="l-contain | site-header__content">
+    <div class="site-header__logo">
+      {% if context == 'home' %}
+        <h1>
+      {% endif %}
+        <a href="/">
+          <img src="{{ site.images }}/logo.svg" alt="World Snacks home page">
+        </a>
+      {% if context == 'home' %}
+        </h1>
+      {% endif %}
+    </div>
+    <nav class="site-header__nav" aria-label="Simple site navigation">
+      <ul class="u-simple-list u-uppercase | site-header__pages">
+        <li>
+          <a href="/">Recent Reviews</a>
+        </li>
+        <li>
+          <a href="/about/">About</a>
+        </li>
+        <li>
+          <a href="/suggest/">Suggest a Snack</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
