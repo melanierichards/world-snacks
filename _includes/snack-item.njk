@@ -15,10 +15,11 @@
     {% endif %}
 
     <p class="c-meta c-snack-item__type">{{ snack.typeOfSnack.fields.type }} from {{ snack.countryOfOrigin.fields.countryName }}</p>
-
     <dl>
       <dt>Rating:</dt>
-      <dd>{{ snack.rating }} out of 5</dd>
+      <dd>
+        {% include 'rating.njk' %}
+      </dd>
       <dt>Source:</dt>
       <dd>{% richTextIfy snack.source %}</dd>
     </dl>

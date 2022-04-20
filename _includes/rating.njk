@@ -1,0 +1,5 @@
+{% set ratingOffset = (snack.rating - 1) * 24 %}
+<svg focusable="false" class="c-rating {% if context == 'simple-snack-item' %}c-simple-snack-item__rating{% endif %}" viewBox="0 0 132 20" width="132" height="20" xmlns="http://www.w3.org/2000/svg">
+  <title>{{ snack.rating }} out of 5 stars</title>
+  <use href="#{{ snack.rating }}-stars" y="-{{ ratingOffset }}" />
+</svg>

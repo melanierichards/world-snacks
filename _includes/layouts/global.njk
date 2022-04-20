@@ -2,11 +2,17 @@
 <html lang="en" {% if slug %}class="html--{{ slug }}"{% endif %}>
 {% include "head.njk" %}
 <body {% if slug %}class="body--{{ slug }}"{% endif %}>
+
+  {% include 'icon-sprite.njk' %}
+
   <a href="#main" class="c-skip-link c-skip-link--main">Skip to main content</a>
   {% include "header.njk" %}
+
   <main role="main" id="main" tabindex="-1">
     {{ content | safe }}
   </main>
+
   {% include "footer.njk" %}
+
   </body>
 </html>

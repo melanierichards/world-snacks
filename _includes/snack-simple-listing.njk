@@ -1,7 +1,8 @@
-<li>
+{% set context = 'simple-snack-item' %}
+<li class="c-simple-snack-item">
   <a href="/snack/{{ snack.name | slug | url }}">
     {{ snack.typeOfSnack.fields.type }}
     {{snack.name}}
   </a>
-  {{ snack.rating }} out of 5
+  {% include 'rating.njk' %}
 </li>
