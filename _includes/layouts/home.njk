@@ -11,6 +11,8 @@ pagination:
   <p class="l-contain | c-masthead__title | site-tagline">{{ tagline }}</p>
 </div>
 
+{% include 'woosh.njk' %}
+
 <section class="l-section" aria-labelledby="recent-heading">
   <h2 class="c-subtle-header" id="recent-heading">Recent Snack Reviews</h2>
   {% for snack in snacks %}

@@ -6,6 +6,8 @@ layout: layouts/global.njk
   <h1 class="c-masthead__title">{{ type.type }}</h1>
 </div>
 
+{% include 'woosh.njk' %}
+
 <section class="l-section" aria-labelledby="recent-heading">
   <h2 class="c-subtle-header" id="recent-heading">Recent Snack Reviews</h2>
   {% set snacksInType = snacks | filterByType(type.type) | reverse %}
