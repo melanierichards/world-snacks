@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" {% if slug %}class="html--{{ slug }}"{% endif %}>
 {% include "head.njk" %}
-<body {% if slug %}class="body--{{ slug }}"{% endif %}>
+  <body {% if slug %}class="body--{{ slug }}"{% endif %}>
 
-  {% include 'icon-sprite.njk' %}
+    {% include 'icon-sprite.njk' %}
 
-  <a href="#main" class="c-skip-link c-skip-link--main">Skip to main content</a>
-  {% include "header.njk" %}
+    <a href="#main" class="c-skip-link c-skip-link--main">Skip to main content</a>
+    {% include "header.njk" %}
 
-  <main role="main" id="main" tabindex="-1">
-    {{ content | safe }}
-  </main>
+    <main role="main" id="main" tabindex="-1">
+      {{ content | safe }}
+    </main>
 
-  {% include "footer.njk" %}
+    {% include "footer.njk" %}
 
+    <script src="/assets/js/scripts.js"></script>
   </body>
 </html>

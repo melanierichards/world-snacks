@@ -15,20 +15,26 @@
     <div class="l-grid">
       <div class="l-grid__half | site-footer__browse-by-section">
         <h3>Browse by country</h3>
-        <ul class="u-simple-list">
+        <ul class="u-simple-list | c-browse-by-list c-browse-by-list--countries">
           {% for country in countries %}
-            <li>
-              <a href="/country/{{ country.countryName | slug }}/">{{ country.countryName }}</a>
+            <li class="c-browse-by-list__item">
+              <a class="c-browse-by-list__link" href="/country/{{ country.countryName | slug }}/">
+                <span class="c-browse-by-list__emoji" aria-hidden="true">{{ country.emoji }}</span>
+                <span class="c-browse-by-list__name">{{ country.countryName }}</span>
+              </a>
             </li>
           {% endfor %}
         </ul>
       </div>
       <div class="l-grid__half | site-footer__browse-by-section">
         <h3>Browse by snack type</h3>
-        <ul class="u-simple-list">
+        <ul class="u-simple-list | c-browse-by-list">
           {% for type in types %}
-            <li>
-              <a href="/type/{{ type.type | slug }}/">{{ type.type }}</a>
+            <li class="c-browse-by-list__item">
+              <a class="c-browse-by-list__link" href="/type/{{ type.type | slug }}/">
+                <span class="c-browse-by-list__emoji" aria-hidden="true">{{ type.emoji }}</span>
+                <span class="c-browse-by-list__name">{{ type.type }}</span>
+              </a>
             </li>
           {% endfor %}
         </ul>

@@ -24,6 +24,40 @@
   padding: var(--space-s);
 }
 
+.c-browse-by-list {
+  margin-top: var(--space-xs);
+}
+
+.c-browse-by-list__item {
+  padding-left: 1.5em;
+}
+
+.c-browse-by-list__item + .c-browse-by-list__item {
+  margin-top: .75rem;
+}
+
+.c-browse-by-list__link {
+  position: relative;
+}
+
+.c-browse-by-list__emoji {
+  position: absolute;
+  left: -1.5em;
+  line-height: 1;
+}
+
+html[data-is-win=true] {
+  .c-browse-by-list--countries {
+    .c-browse-by-list__item {
+      padding-left: 0;
+    }
+
+    .c-browse-by-list__emoji {
+      display: none;
+    }
+  }
+}
+
 @media (min-width: $bp-m) {
   .site-footer__pages {
     text-align: center;
