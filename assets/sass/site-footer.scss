@@ -4,13 +4,14 @@
  */
 
 .site-footer {
-  background-color: var(--color-site-footer-bg);
+  background: repeat url('../images/footer.png');
+  background-size: 113px 76px;
 }
 
  .site-footer__pages,
  .site-footer__browse-by-section {
   border-radius: .5rem;
-  background-color: var(--color-body-bg);
+  background-color: var(--color-footer-bg);
 }
 
 .site-footer__pages {
