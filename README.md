@@ -28,19 +28,19 @@ Requires the following keys, which can be obtained in Contentful through Setting
 0. Install [Node](https://nodejs.org/) :)
 1. Clone the repo
 2. Run `npm install`
-3. Run `npm run serve`
+3. Run `npm run start`
 4. Visit `localhost:8080`
 
 ## Commands
 
-| Command                    | Purpose                      |
-| :------------------------- | :--------------------------- |
-| npm run serve              | Serve project                |
-| npm run build              | Build project                |
-| npm run checks             | Validate HTML & lint JS      |
-| npm run lint               | Run eslint                   |
-| npm run lint:fix           | Run eslint and fix issues    |
-| npm run validate           | Run html-validate            |
+| Command                    | Purpose                          |
+| :------------------------- | :------------------------------- |
+| npm run start              | Start project (serve, build CSS) |
+| npm run build              | Build project                    |
+| npm run checks             | Validate HTML & lint JS          |
+| npm run lint               | Run eslint                       |
+| npm run lint:fix           | Run eslint and fix issues        |
+| npm run validate           | Run html-validate                |
 
 ## Media
 
