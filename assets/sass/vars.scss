@@ -31,7 +31,7 @@ $bp-xxl: 125rem;
   --space-col-gap: var(--space-s);
   --space-contain: var(--space-s);
   --space-section: var(--space-l);
-  --space-subsection: var(--space-m);
+  --space-subsection: 3rem;
 }
 
 @media (min-width: $bp-s) {
@@ -72,6 +72,7 @@ $bp-xxl: 125rem;
 
 :root {
   --color-banner-bg: papayawhip;
+  --color-blob-text: #1b1b1b;
   --color-body-bg: #fff;
   --color-body-text: #6b6b6b;
   --color-focus-outline: #F14E76;

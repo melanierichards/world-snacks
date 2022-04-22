@@ -1,11 +1,22 @@
 <article class="l-contain l-subsection | c-snack-item">
-  {% if snack.image %}
-    <img class="c-snack-item__image" src="{{ snack.image.fields.file.url }}" width="{{ snack.image.fields.file.details.image.width }}" height="{{ snack.image.fields.file.details.image.height }}" loading="lazy" decoding="async" alt="{{ snack.image.fields.description }}" />
-  {% else %}
-    <div class="c-snack-item__placeholder">
-      <span>?</span>
+  <div class="c-snack-item__media">
+    {% if snack.image %}
+      <img class="c-snack-item__image" src="{{ snack.image.fields.file.url }}" width="{{ snack.image.fields.file.details.image.width }}" height="{{ snack.image.fields.file.details.image.height }}" loading="lazy" decoding="async" alt="{{ snack.image.fields.description }}" />
+    {% else %}
+      <div class="c-snack-item__placeholder">
+        <span>?</span>
+      </div>
+    {% endif %}
+    <div class="c-snack-item__blob c-snack-item__blob--{{ snack.rating}}">
+      <span>
+        {% if snack.rating == 1 %}Blech
+        {% elseif snack.rating == 2 %}Nope
+        {% elseif snack.rating == 3 %}Fine
+        {% elseif snack.rating == 4 %}Yum!
+        {% elseif snack.rating == 5 %}Fave!!{% endif %}
+      </span>
     </div>
-  {% endif %}
+  </div>
 
   <div class="c-snack-item__info">
     {% if context != 'snack' %}
