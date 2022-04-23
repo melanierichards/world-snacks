@@ -11,17 +11,17 @@ layout: layouts/global.njk
 <section class="l-section" aria-labelledby="recent-heading">
   <h2 class="c-subtle-header" id="recent-heading">Recent Snack Reviews</h2>
   {% set snacksInType = snacks | filterByType(type.type) | reverse %}
-  {% for snack in snacksInType | limit(10) %}
+  {% for snack in snacksInType | limit(5) %}
     {% set context = 'type' %}
     {% include 'snack-item.njk' %}
   {% endfor %}
 </section>
 
-{% if snacksInType.length > 10 %}
+{% if snacksInType.length > 5 %}
   <section class="l-contain l-section" aria-labelledby="more-heading">
     <h2 class="c-subtle-header" id="more-heading">More Treats</h2>
-    <ul class="l-subsection | u-simple-list">
-      {% for snack in snacksInType | offset(10) %}
+    <ul class="l-subsection | u-simple-list | c-simple-snack-listings">
+      {% for snack in snacksInType | offset(5) %}
         {% set context = 'type' %}
         {% include 'snack-simple-listing.njk' %}
       {% endfor %}

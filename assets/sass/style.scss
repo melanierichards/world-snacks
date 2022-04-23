@@ -9,6 +9,7 @@
 @import 'components/pagination';
 @import 'components/rating';
 @import 'components/skip-link';
+@import 'components/snack-image-placeholder'; /* Needs to go before simple-snack-item */
 @import 'components/simple-snack-item';
 @import 'components/snack-item';
 @import 'components/subtle-header';

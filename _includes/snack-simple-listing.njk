@@ -1,8 +1,19 @@
 {% set context = 'simple-snack-item' %}
 <li class="c-simple-snack-item">
-  <a href="/snack/{{ snack.name | slug | url }}">
-    {{ snack.typeOfSnack.fields.type }}
-    {{snack.name}}
-  </a>
-  {% include 'rating.njk' %}
+  <div class="c-simple-snack-item__media">
+    {% if snack.image %}
+      <img src="{{ snack.image.fields.file.url }}?w=256" width="128" height="128" loading="lazy" decoding="async" alt="{{ snack.image.fields.description }}" />
+    {% else %}
+      <div class="c-snack-image-placeholder c-simple-snack-item__placeholder">
+        <span>?</span>
+      </div>
+    {% endif %}
+  </div>
+  <div class="c-simple-snack-item__info">
+    <div class="c-simple-snack-item__title">
+      <a href="/snack/{{ snack.name | slug | url }}">{{snack.name}}</a>
+    </div>
+    <p class="c-meta c-simple-snack-item__meta">{{ snack.typeOfSnack.fields.type }} from {{ snack.countryOfOrigin.fields.countryName }}</p>
+    {% include 'rating.njk' %}
+  </div>
 </li>

@@ -5,16 +5,7 @@
  */
 
 .c-snack-item__placeholder {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  aspect-ratio: 2 / 1;
-  padding: var(--space-m);
-  text-align: center;
-  font: 8em/1 var(--font-serif);
-  font-variation-settings: "wght" 900, "SOFT" 100,;
-  background-color: var(--color-placeholder-bg);
-  color: var(--color-placeholder-text);
+  font-size: 8em;
 }
 
 .c-snack-item__image {

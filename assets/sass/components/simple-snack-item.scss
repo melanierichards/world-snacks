@@ -4,7 +4,53 @@
  *  =============================================
  */
 
-.c-simple-snack-item__rating {
-  width: auto;
-  height: 16px;
+.c-simple-snack-item {
+  display: grid;
+  grid-template-columns: 8rem auto;
+  gap: var(--space-m);
+  align-items: center;
+  padding: var(--space-m) 0;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.c-simple-snack-item + .c-simple-snack-item {
+  margin-top: 0;
+}
+
+.c-simple-snack-item__media {
+  img {
+    height: auto;
+  }
+}
+
+.c-simple-snack-item__placeholder {
+  aspect-ratio: 1 / 1;
+}
+
+.c-simple-snack-item__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.c-simple-snack-item__title {
+  a:link, a:visited {
+    display: inline;
+    font: 1.25rem/1.3 var(--font-serif);
+    font-variation-settings: "wght" 700, "SOFT" 100, "WONK" 1;
+    color: var(--color-header-text);
+  }
+}
+
+.c-simple-snack-item__meta {
+  margin: var(--space-xxs) 0 var(--space-xs);
+}
+
+@media (min-width: $bp-l) {
+  .c-simple-snack-listings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-column-gap: var(--space-l);
+  }
 }
