@@ -20,9 +20,9 @@
 
   <div class="c-snack-item__info">
     {% if context != 'snack' %}
-      <h2>
+      <h3 class="h2">
         <a href="/snack/{{ snack.name | slug | url }}">{{ snack.name }}</a>
-      </h2>
+      </h3>
     {% endif %}
 
     <p class="c-meta c-snack-item__type">{{ snack.typeOfSnack.fields.type }} from {{ snack.countryOfOrigin.fields.countryName }}</p>
