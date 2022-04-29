@@ -11,7 +11,9 @@
 
 @media (min-width: $bp-s) {
   .about-main__content {
-    font-size: 1.5rem;
+    p, ol, ul {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -22,6 +24,8 @@
   }
 
   .about-main__content {
-    font-size: 1.375rem;
+    p, ol, ul {
+      font-size: 1.375rem;
+    }
   }
 }

@@ -87,8 +87,10 @@ h3, .h3 {
   font-weight: 700;
 }
 
-p, ul, ol {
+p, ul, ol, dl {
   margin: var(--space-none);
+  font-size: 1.125rem;
+  line-height: 1.2;
 }
 
 dl {
@@ -131,8 +133,8 @@ img {
 }
 
 @media (min-width: $bp-s) {
-  dl {
-    font-size: 1.125em;
+  p, ul, ol {
+    font-size: 1.25rem;
   }
 }
 
