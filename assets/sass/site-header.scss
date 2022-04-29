@@ -11,6 +11,8 @@
 }
 
 .site-header__logo {
+  display: inline-block;
+
   a:link, a:visited {
     border-bottom: 0;
     background-color: transparent;
