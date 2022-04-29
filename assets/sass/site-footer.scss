@@ -9,8 +9,8 @@
   background-size: 113px 76px;
 }
 
- .site-footer__pages,
- .site-footer__browse-by-section {
+.site-footer__pages,
+.site-footer__browse-by-section {
   border-radius: .5rem;
   background-color: var(--color-footer-bg);
 }
@@ -28,22 +28,35 @@
   margin-top: var(--space-xs);
 }
 
-.c-browse-by-list__item {
-  padding-left: 1.5em;
+.c-browse-by-list--countries {
+  columns: 2;
 }
 
 .c-browse-by-list__item + .c-browse-by-list__item {
   margin-top: .75rem;
 }
 
-.c-browse-by-list__link {
-  position: relative;
+.c-browse-by-list__emoji {
+  margin-right: var(--space-xxs);
 }
 
-.c-browse-by-list__emoji {
-  position: absolute;
-  left: -1.5em;
-  line-height: 1;
+.c-browse-by-list__name {
+  border-bottom: 2px solid var(--color-link-border);
+  transition: background-color 200ms ease-in, border-bottom-color 200ms ease-in;
+}
+
+.c-browse-by-list__link:link,
+.c-browse-by-list__link:visited {
+  border-bottom: 0;
+}
+
+.c-browse-by-list__link:hover {
+  background-color: transparent;
+
+  .c-browse-by-list__name {
+    background-color: var(--color-link-hover-bg);
+    border-color: transparent;
+  }
 }
 
 html[data-is-win=true] {
