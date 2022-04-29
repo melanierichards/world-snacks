@@ -31,6 +31,8 @@
 }
 
 .site-header__pages {
+  margin-top: var(--space-xxs);
+
   li, li + li {
     display: inline-block;
     margin: var(--space-s) var(--space-xxs) 0;
