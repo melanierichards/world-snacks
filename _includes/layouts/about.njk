@@ -1,0 +1,78 @@
+---
+layout: layouts/global.njk
+---
+
+<div class="l-section l-section--pad | c-masthead">
+  <h1 class="l-contain | c-masthead__title">{{ title }}</h1>
+</div>
+
+{% include 'woosh.njk' %}
+
+<section class="l-contain l-section | about-main" aria-labelledby="recent-heading">
+  <div class="l-flow | about-main__content">
+    {{ pageAbout.fields.content.content }}
+    {% richTextIfy pageAbout.content %}
+  </div>
+  <div class="about-main__supplemental">
+    <h2 id="rating-heading">Rating Key</h2>
+    <table aria-labelledby="rating-heading">
+      <thead class="u-uppercase">
+        <th>Star rating</th>
+        <th>Meaning</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <svg focusable="false" class="c-rating" viewBox="0 0 132 20" width="132" height="20" xmlns="http://www.w3.org/2000/svg">
+              <title>5 out of 5 stars</title>
+              <use href="#5-stars" y="-96" />
+            </svg>
+          </td>
+          <td>I will look for this snack when I visit this country</td>
+        </tr>
+        <tr>
+          <td>
+            <svg focusable="false" class="c-rating" viewBox="0 0 132 20" width="132" height="20" xmlns="http://www.w3.org/2000/svg">
+              <title>4 out of 5 stars</title>
+              <use href="#4-stars" y="-72" />
+            </svg>
+          </td>
+          <td>Tasty, would buy again</td>
+        </tr>
+        <tr>
+          <td>
+            <svg focusable="false" class="c-rating" viewBox="0 0 132 20" width="132" height="20" xmlns="http://www.w3.org/2000/svg">
+              <title>3 out of 5 stars</title>
+              <use href="#3-stars" y="-48" />
+            </svg>
+          </td>
+          <td>It’s fine, don’t need to go out of my way to have it again</td>
+        </tr>
+        <tr>
+          <td>
+            <svg focusable="false" class="c-rating" viewBox="0 0 132 20" width="132" height="20" xmlns="http://www.w3.org/2000/svg">
+              <title>2 out of 5 stars</title>
+              <use href="#2-stars" y="-24" />
+            </svg>
+          </td>
+          <td>Not for me</td>
+        </tr>
+        <tr>
+          <td>
+            <svg focusable="false" class="c-rating" viewBox="0 0 132 20" width="132" height="20" xmlns="http://www.w3.org/2000/svg">
+              <title>1 out of 5 stars</title>
+              <use href="#1-stars" />
+            </svg>
+          </td>
+          <td>Spit it out immediately</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="l-subsection">
+      <h2>Colophon</h2>
+      {% richTextIfy pageAbout.colophon %}
+    </div>
+  </div>
+</section>
+
+{% include 'pagination.njk' %}

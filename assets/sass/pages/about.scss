@@ -1,0 +1,27 @@
+/*
+ *  =============================================
+ *  PAGE: ABOUT
+ *  =============================================
+ */
+
+.about-main {
+  display: grid;
+  grid-gap: var(--space-subsection) var(--space-l);
+}
+
+@media (min-width: $bp-s) {
+  .about-main__content {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: $bp-l) {
+  .about-main {
+    grid-template-columns: 1fr 26rem;
+    grid-row-gap: var(--space-xl);
+  }
+
+  .about-main__content {
+    font-size: 1.375rem;
+  }
+}
