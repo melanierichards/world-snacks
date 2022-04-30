@@ -87,7 +87,7 @@ h3, .h3 {
   font-weight: 700;
 }
 
-p, ul, ol, dl {
+p, ul, ol, dl, label, legend, input, textarea {
   margin: var(--space-none);
   font-size: 1.125rem;
   line-height: 1.2;
@@ -133,7 +133,7 @@ img {
 }
 
 @media (min-width: $bp-s) {
-  p, ul, ol {
+  p, ul, ol, label, legend, input, textarea {
     font-size: 1.25rem;
   }
 }
@@ -141,5 +141,90 @@ img {
 @media (min-width: $bp-l) {
   dl {
     font-size: 1.25em;
+  }
+}
+
+/*
+ *  ---------------------------------------------
+ *  FORM ELEMENTS
+ *  ---------------------------------------------
+ */
+
+label, legend {
+  display: block;
+}
+
+.c-field:not(:first-child), fieldset {
+  margin-top: var(--space-s);
+}
+
+.c-field > label, legend {
+  display: block;
+  font-family: var(--font-serif);
+  font-variation-settings: "wght" 650, "SOFT" 100, "WONK" 1;
+  color: var(--color-label-text);
+}
+
+input[type="text"], input[type="email"], textarea, button {
+  border: 2px solid var(--color-field-border);
+  border-radius: 4px;
+  font-family: inherit;
+
+  &:focus {
+    outline-offset: 4px;
+  }
+}
+
+input[type="text"], input[type="email"], textarea {
+  display: block;
+  margin-top: var(--space-xxs);
+  width: 100%;
+  padding: var(--space-xxs);
+  background-color: transparent;
+  color: inherit;
+}
+
+.c-helper-text {
+  margin-top: var(--space-xxs);
+  font-size: 1rem;
+  color: var(--color-meta-text);
+}
+
+fieldset {
+  border: 0;
+  padding: var(--space-xxs) 0 0;
+
+  label {
+    position: relative;
+    margin-top: .75rem;
+    padding-left: 1.5em;
+    line-height: 1;
+  }
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: 0;
+  top: calc(50% - .4125em);
+  width: .825em;
+  height: .825em;
+  accent-color: var(--color-field-border);
+}
+
+button {
+  border-color: transparent;
+  padding: .75rem;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  transition: background-color 200ms ease-in;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: var(--color-button-hover-bg);
   }
 }

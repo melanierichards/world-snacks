@@ -1,0 +1,11 @@
+---
+layout: layouts/global.njk
+---
+
+<div class="l-section l-section--pad | c-masthead">
+  <h1 class="l-contain | c-masthead__title">{{ title }}</h1>
+</div>
+
+{% include 'woosh.njk' %}
+
+<div class="l-contain l-section | thanks-message">{{ content | safe }}</div>

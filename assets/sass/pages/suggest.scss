@@ -1,0 +1,24 @@
+/*
+ *  =============================================
+ *  PAGE: SUGGEST
+ *  =============================================
+ */
+
+.suggest-form {
+  width: 40rem;
+  max-width: calc(100vw - var(--space-contain)*2);
+}
+
+.suggest-form__heading {
+  margin-bottom: var(--space-xs);
+}
+
+.suggest-form__explainer {
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.thanks-message {
+  text-align: center;
+}
