@@ -7,47 +7,17 @@ layout: layouts/global.njk
 </div>
 
 {% include 'woosh.njk' %}
-
-<form aria-labelledby="suggest-heading" class="l-contain l-section | suggest-form" name="suggest" action="/thanks" method="POST" data-netlify="true" netlify-honeypot="beeeeeees">
-  <h2 id="suggest-heading" class="c-subtle-header suggest-form__heading">What snack should I try next?</h2>
-  <p class="suggest-form__explainer">All fields are required unless otherwise stated. Thank you for your suggestion!</p>
-  <div class="u-vis-hidden">
-    <label>Don’t fill this field out if you’re human, skip to name: <input name="beeeeeees" type="text"></label>
-  </div>
-  <div class="c-field">
-    <label for="name">Your Name</label>
-    <input id="name" autocomplete="name" name="name" type="text" required />
-  </div>
-  <div class="c-field">
-    <label for="email">Email Address</label>
-    <input id="email" aria-describedby="email-helper" autocomplete="email" name="email" type="email" required />
-    <p id="email-helper" class="c-helper-text">This will not be shared but I may get in touch</p>
-  </div>
-  <div class="c-field">
-    <label for="snack-to-review">What snack would you like me to review?</label>
-    <input id="snack-to-review" aria-describedby="snack-helper" name="snack" type="text" required />
-    <p id="snack-helper" class="c-helper-text">Please provide the brand and snack name</p>
-  </div>
-  <fieldset>
-    <legend>What best describes the reason you’d like me to try this snack?</legend>
-    <label>
-      <input type="radio" name="reason" value="tasty" required /> It is tasty
-    </label>
-    <label>
-      <input type="radio" name="reason" value="important" /> It is important to you or your culture
-    </label>
-    <label>
-      <input type="radio" name="reason" value="curious" /> You’re curious what I’d think of it
-    </label>
-    <label>
-      <input type="radio" name="reason" value="amusement" /> You don’t expect it to be tasty and therefore would get great amusement out of a review
-    </label>
-  </fieldset>
-  <div class="c-field">
-    <label for="other-comments">Anything else you want to tell me about this snack? <span class="c-meta">Optional</span></label>
-    <textarea id="other-comments" name="anything-else" rows="4"></textarea>
-  </div>
-  <div class="c-field">
-    <button type="submit">Suggest this snack</button>
-  </div>
-<form>
+<form name="contact" method="POST" data-netlify="true">
+<p>
+    <label>Your Name: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
