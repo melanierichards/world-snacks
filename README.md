@@ -14,11 +14,6 @@ Requires the following keys, which can be obtained in Contentful through Setting
 * CTFL_SPACE: the token for this Contentful space
 * CTFL_ACCESSTOKEN: use the API key for published content
 
-## Setup Checklist
-
-* [ ] Update head.njk with any info for: RSS, social metadata, icons
-* [ ] Update images referenced in manifest.webmanifest
-
 -------------------------------------------------------------
 
 ## To build
