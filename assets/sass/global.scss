@@ -24,9 +24,8 @@ body {
 }
 
 :focus {
-  outline-color: var(--color-focus-outline);
+  outline: 3px solid var(--color-focus-outline);
   outline-offset: 3px;
-  outline-width: 3px;
 }
 
 ::selection {
