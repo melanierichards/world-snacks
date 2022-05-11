@@ -1,6 +1,6 @@
 # World Snacks
 
-My impressions of snacks from around the world
+My impressions of snacks from around the world, found at https://snacks.melanie-richards.com
 
 ## Tech Stack
 
