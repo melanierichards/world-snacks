@@ -3,7 +3,8 @@
     "html-validate:recommended"
   ],
   "rules": {
-    "no-redundant-role": "warn",
+    "no-dup-class": "warn",
+    "no-redundant-role": "off",
     "no-trailing-whitespace": "off"
   }
 }

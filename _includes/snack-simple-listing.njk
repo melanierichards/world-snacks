@@ -2,7 +2,7 @@
 <li class="c-simple-snack-item">
   <div class="c-simple-snack-item__media">
     {% if snack.image %}
-      <img src="{{ snack.image.fields.file.url }}?w=256" width="128" height="128" loading="lazy" decoding="async" alt="{{ snack.image.fields.description }}" />
+      <img src="{{ snack.image.fields.file.url }}?w=256" width="128" height="128" loading="lazy" decoding="async" alt="{{ snack.image.fields.description }}">
     {% else %}
       <div class="c-snack-image-placeholder c-simple-snack-item__placeholder">
         <span>?</span>
