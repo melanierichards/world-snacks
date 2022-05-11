@@ -1,44 +1,65 @@
 <footer role="contentinfo" class="l-section l-section--pad | site-footer">
-  <nav class="l-contain" aria-labelledby="site-footer__heading">
-    <h2 class="u-vis-hidden" id="site-footer__heading">Site Navigation</h2>
-    <ul class="u-simple-list | site-footer__pages">
-      <li>
-        <a href="/">Recent Snacks</a>
-      </li>
-      <li>
-        <a href="/about/">About World Snacks</a>
-      </li>
-      <li>
-        <a href="/suggest/">Suggest a Snack</a>
-      </li>
-    </ul>
-    <div class="l-grid">
-      <div class="l-grid__half | site-footer__browse-by-section">
-        <h3>Browse by country</h3>
-        <ul class="u-simple-list | c-browse-by-list c-browse-by-list--countries">
-          {% for country in countries %}
-            <li class="c-browse-by-list__item">
-              <a class="c-browse-by-list__link" href="/country/{{ country.countryName | slug }}/">
-                <span class="c-browse-by-list__emoji" aria-hidden="true">{{ country.emoji }}</span>
-                <span class="c-browse-by-list__name">{{ country.countryName }}</span>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
+  <div  class="l-contain">
+    <nav aria-labelledby="site-footer__heading">
+      <h2 class="u-vis-hidden" id="site-footer__heading">Site Navigation</h2>
+      <ul class="u-simple-list | site-footer__section site-footer__pages">
+        <li>
+          <a href="/">Recent Snacks</a>
+        </li>
+        <li>
+          <a href="/about/">About World Snacks</a>
+        </li>
+        <li>
+          <a href="/suggest/">Suggest a Snack</a>
+        </li>
+      </ul>
+      <div class="l-grid">
+        <div class="l-grid__half | site-footer__section site-footer__browse-by-section">
+          <h3>Browse by country</h3>
+          <ul class="u-simple-list | c-browse-by-list c-browse-by-list--countries">
+            {% for country in countries %}
+              <li class="c-browse-by-list__item">
+                <a class="c-browse-by-list__link" href="/country/{{ country.countryName | slug }}/">
+                  <span class="c-browse-by-list__emoji" aria-hidden="true">{{ country.emoji }}</span>
+                  <span class="c-browse-by-list__name">{{ country.countryName }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="l-grid__half | site-footer__section site-footer__browse-by-section">
+          <h3>Browse by snack type</h3>
+          <ul class="u-simple-list | c-browse-by-list">
+            {% for type in types %}
+              <li class="c-browse-by-list__item">
+                <a class="c-browse-by-list__link" href="/type/{{ type.type | slug }}/">
+                  <span class="c-browse-by-list__emoji" aria-hidden="true">{{ type.emoji }}</span>
+                  <span class="c-browse-by-list__name">{{ type.type }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
-      <div class="l-grid__half | site-footer__browse-by-section">
-        <h3>Browse by snack type</h3>
-        <ul class="u-simple-list | c-browse-by-list">
-          {% for type in types %}
-            <li class="c-browse-by-list__item">
-              <a class="c-browse-by-list__link" href="/type/{{ type.type | slug }}/">
-                <span class="c-browse-by-list__emoji" aria-hidden="true">{{ type.emoji }}</span>
-                <span class="c-browse-by-list__name">{{ type.type }}</span>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
+    </nav>
+    <div class="l-grid site-footer__site-info">
+      <div class="l-grid__half | site-footer__section">
+        <p>© 2022 <a href="https://melanie-richards.com">Melanie Richards</a>. Made with Eleventy and Contentful, and hosted on Netlify. <a href="https://github.com/melanierichards/world-snacks">Explore the code</a></p>
+      </div>
+      <div class="l-grid__half | site-footer__section">
+        <fieldset class="theme-switcher">
+          <legend>Theme</legend>
+          <label>
+            <input id="theme-radio-system" type="radio" name="theme" value="system" required checked />System
+          </label>
+          <label>
+            <input id="theme-radio-light" type="radio" name="theme" value="light" required />Light
+          </label>
+          <label>
+            <input id="theme-radio-dark" type="radio" name="theme" value="dark" required />Dark
+          </label>
+        </fieldset>
       </div>
     </div>
-  </nav>
+  </div>
 </footer>
