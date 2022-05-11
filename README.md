@@ -16,8 +16,6 @@ Requires the following keys, which can be obtained in Contentful through Setting
 
 ## Setup Checklist
 
-* [x] Update package.json with project details
-* [ ] Go thru eleventy.js and un-comment or delete utilities; move require statements to top of file
 * [ ] Update head.njk with any info for: RSS, social metadata, icons
 * [ ] Update images referenced in manifest.webmanifest
 

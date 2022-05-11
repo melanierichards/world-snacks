@@ -22,31 +22,31 @@ module.exports = function (eleventyConfig) {
       };
 
       // Convert snack fields to rich text
-      eleventyConfig.addShortcode("richTextIfy", function(snackField) {
+      eleventyConfig.addShortcode('richTextIfy', function(snackField) {
         return documentToHtmlString(snackField);
       });
 
     // DATE FILTERS
 
       // Prettify dates
-      eleventyConfig.addFilter("prettyDate", function(value) {
+      eleventyConfig.addFilter('prettyDate', function(value) {
         return DateTime.fromJSDate(value, {zone: 'utc'}).toFormat('MMM dd, yyyy');
       });
 
     // LIMIT ARRAY
-    eleventyConfig.addFilter("limit", function (arr, limit) {
+    eleventyConfig.addFilter('limit', function (arr, limit) {
       return arr.slice(0, limit);
     });
 
     // OFFSET ARRAY
-    eleventyConfig.addFilter("offset", function (arr, limit) {
+    eleventyConfig.addFilter('offset', function (arr, limit) {
       return arr.slice(limit + 1);
     });
 
   // COUNTRIES
 
     // FILTER SNACKS BY COUNTRY
-    eleventyConfig.addFilter("filterByCountry", function(snacks, country) {
+    eleventyConfig.addFilter('filterByCountry', function(snacks, country) {
       snacks = snacks.filter(snack => {
         return snack.countryOfOrigin.fields.countryName.includes(country);
       });
@@ -56,36 +56,10 @@ module.exports = function (eleventyConfig) {
   // TYPES
 
     // FILTER SNACKS BY TYPE
-    eleventyConfig.addFilter("filterByType", function(snacks, type) {
+    eleventyConfig.addFilter('filterByType', function(snacks, type) {
       snacks = snacks.filter(snack => {
         return snack.typeOfSnack.fields.type.includes(type);
       });
       return snacks;
     });
-
-  // BLOG
-
-    // RSS FEED
-    /*
-    const pluginRss = require("@11ty/eleventy-plugin-rss");
-    eleventyConfig.addPlugin(pluginRss);
-    */
-
-    /* EXTRA MD OPTIONS
-     * Classes etc: https://www.npmjs.com/package/markdown-it-attrs
-     * Header anchors: https://www.npmjs.com/package/markdown-it-anchor
-     */
-
-    /*
-    const markdownIt = require('markdown-it');
-    const markdownItAnchor = require('markdown-it-anchor');
-    const markdownItAttrs = require("markdown-it-attrs");
-    let markdownLibrary = markdownIt({
-      html: true,
-      breaks: true,
-      linkify: true
-    }).use(markdownItAttrs).use(markdownItAnchor, {permalink: false});
-
-    eleventyConfig.setLibrary('md', markdownLibrary);
-    */
 };
