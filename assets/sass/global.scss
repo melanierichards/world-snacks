@@ -144,6 +144,12 @@ img {
   }
 }
 
+@media (forced-colors: active) {
+  a:hover {
+    border-bottom-style: dotted;
+  }
+}
+
 /*
  *  ---------------------------------------------
  *  FORM ELEMENTS

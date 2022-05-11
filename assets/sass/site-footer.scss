@@ -129,3 +129,23 @@ html[data-is-win=true] {
     }
   }
 }
+
+/*
+ *  ---------------------------------------------
+ *  FORCED COLORS
+ *  ---------------------------------------------
+ */
+
+@media (forced-colors: active) {
+  .site-footer::before {
+    display: none;
+  }
+
+  .site-footer__section {
+    border: 1px solid;
+  }
+
+  a:hover .c-browse-by-list__name {
+    border-bottom-style: dotted;
+  }
+}

@@ -110,3 +110,15 @@
     }
   }
 }
+
+/*
+ *  ---------------------------------------------
+ *  FORCED COLORS
+ *  ---------------------------------------------
+ */
+
+ @media (forced-colors: active) {
+  .c-pagination a:hover span {
+    border-bottom-style: dotted;
+  }
+}
