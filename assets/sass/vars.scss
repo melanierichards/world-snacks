@@ -96,10 +96,44 @@ $bp-xxl: 125rem;
   --color-header-text: #53499C;
   --color-masthead-text: #D91142;
   --color-meta-text: #717171;
+  --color-pagination-link-hover-text: #383168;
   --color-placeholder-bg: #FEE7EC;
   --color-placeholder-text: #D91142;
   --color-selection-bg: #75E2F0;
   --color-selection-text: #000;
-  --color-site-footer-bg: #E3E1F1;
   --color-subtle-header-text: #6b6b6b;
+}
+
+@mixin darkScheme {
+  color-scheme: dark;
+
+  --color-banner-bg: #621D4B;
+  --color-border: #68609F;
+  --color-body-bg: #302F3F;
+  --color-body-text: #dedede;
+  --color-button-bg: #c3bfe1;
+  --color-button-hover-bg: #d9d6ec;
+  --color-button-text: #000;
+  --color-field-border: #8D85C6;
+  --color-footer-bg: #302F3F;
+  --color-header-link-border: hsla(346,88%,93%,.4);
+  --color-header-link-text: #fddfe6;
+  --color-label-text: #bebebe;
+  --color-link-hover-bg: #594ea8;
+  --color-link-text: #c3bfe1;
+  --color-header-text: #d9d6ec;
+  --color-masthead-text: #fddfe6;
+  --color-meta-text: #bebebe;
+  --color-pagination-link-hover-text: #c3bfe1;
+  --color-subtle-header-text: #bebebe;
+}
+
+[data-prefers-theme="dark"] {
+  @include darkScheme;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-prefers-theme="light"]) {
+    @include darkScheme;
+  }
 }
