@@ -27,31 +27,30 @@
     <meta name="twitter:title" content="{{ site.title }}">
   {% endif %}
 
-  {% if description %}
-    <meta property="og:description" content="{{ description }}">
-    <meta property="twitter:description" content="{{ description }}">
-  {% endif %}
-
-  {% if featureSrc and featureExt %}
-    <meta property="og:image" content="{{ site.url }}{{ site.images }}/content/{{ featureSrc}}-m.{{ featureExt }}">
+  {% if snack.image.fields.file.url and snack.image.fields.description %}
+    <meta property="og:image" content="{{ snack.image.fields.file.url }}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/content/{{ featureSrc}}-m.{{ featureExt }}">
+    <meta name="twitter:image:src" content="{{ snack.image.fields.description }}">
     {% if featureAlt %}
       <meta name="twitter:image:alt" content="{{ featureAlt }}">
     {% endif %}
+    <meta property="og:description" content="A snack review">
+    <meta property="twitter:description" content="A snack review">
   {% else %}
-    <meta name="og:image" content="{{ site.url }}/assets/images/favicon.png">
+    <meta name="og:image" content="{{ site.url }}/assets/images/social-twitter.png">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:image:src" content="{{ site.url }}/assets/images/favicon.png">
-    <meta name="twitter:image:alt" content="Melanie Richards’s fiber crafts favicon">
+    <meta name="twitter:image:src" content="{{ site.url }}/assets/images/social-twitter.png">
+    <meta name="twitter:image:alt" content="Logo: 'world snacks' written in puffy pink letters inside an illustration stylized like American Smarties candies">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="twitter:description" content="{{ site.description }}">
   {% endif %}
-  
+
   <link rel="canonical" href="{{ site.url }}{{ url }}">
 
   <!-- ICONS -->
-  <link rel="icon" href="/assets/images/favicon.ico">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
   <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"> <!-- 180 x 180 -->
+  <link rel="apple-touch-icon" href="/assets/images/icon-180.png"> <!-- Apple Touch Icon -->
   <link rel="manifest" href="/manifest.webmanifest">
 
   <!-- STYLE -->
