@@ -28,6 +28,10 @@ body {
   outline-offset: 3px;
 }
 
+main:focus {
+  outline: 0;
+}
+
 ::selection {
   background: var(--color-selection-bg);
   color: var(--color-selection-text);
