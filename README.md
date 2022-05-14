@@ -11,8 +11,9 @@ My impressions of snacks from around the world, found at https://snacks.melanie-
 
 Requires the following keys, which can be obtained in Contentful through Settings > API Keys:
 
-* CTFL_SPACE: the token for this Contentful space
-* CTFL_ACCESSTOKEN: use the API key for published content
+* `CTFL_SPACE`: the token for this Contentful space
+* `CTFL_ACCESSTOKEN`: use the API key for published content
+* `CTFL_ABOUT_ID`: the ID for the "About" page entry in Contentful
 
 -------------------------------------------------------------
 
@@ -28,12 +29,12 @@ Requires the following keys, which can be obtained in Contentful through Setting
 
 | Command                    | Purpose                          |
 | :------------------------- | :------------------------------- |
-| npm run start              | Start project (serve, build CSS) |
-| npm run build              | Build project                    |
-| npm run checks             | Validate HTML & lint JS          |
-| npm run lint               | Run eslint                       |
-| npm run lint:fix           | Run eslint and fix issues        |
-| npm run validate           | Run html-validate                |
+| `npm run start`            | Start project (serve, build CSS) |
+| `npm run build `           | Build project                    |
+| `npm run checks`           | Validate HTML & lint JS          |
+| `npm run lint`             | Run eslint                       |
+| `npm run lint:fix`         | Run eslint and fix issues        |
+| `npm run validate`         | Run html-validate                |
 
 ## Media
 
