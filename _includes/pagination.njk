@@ -21,7 +21,7 @@
             <span>{{ nextName }}</span>
           {% elseif context == 'type' %}
             {% set nextSlug = pagination.href.next | slug | replace('type', '') %}
-            {% set nextWithAmp = nextSlug | replace('and', '&') %}
+            {% set nextWithAmp = nextSlug | replace('-and-', '-&-') %}
             {% set nextName = nextWithAmp | replace('-', ' ') %}
             <span>{{ nextName }}</span>
           {% else %}
