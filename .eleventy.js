@@ -1,3 +1,6 @@
+// RSS
+const pluginRss = require('@11ty/eleventy-plugin-rss');
+
 // Reference env vars (Contentful access tokens)
 require('dotenv').config();
 
@@ -15,6 +18,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('assets');
     eleventyConfig.addPassthroughCopy('manifest.webmanifest');
 
+    // RSS FEED
+    eleventyConfig.addPlugin(pluginRss);
+
     // RICH TEXT
 
       // Enable access to rich text from Contentful
@@ -28,6 +34,11 @@ module.exports = function (eleventyConfig) {
       });
 
     // DATE FILTERS
+
+      // Machine-readable dates
+      eleventyConfig.addFilter("machineDate", function(value) {
+        return DateTime.fromJSDate(value, {zone: 'utc'}).toISO();
+      });
 
       // Prettify dates
       eleventyConfig.addFilter('prettyDate', function(value) {
