@@ -1,5 +1,7 @@
 # World Snacks
 
+STAGING BRANCH
+
 My impressions of snacks from around the world, found at https://snacks.melanie-richards.com
 
 ## Tech Stack
