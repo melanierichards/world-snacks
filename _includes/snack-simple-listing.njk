@@ -11,7 +11,7 @@
   </div>
   <div class="c-simple-snack-item__info">
     <div class="h3 | c-simple-snack-item__title">
-      <a href="/snack/{{ snack.name | slug | url }}">{{snack.name}}</a>
+      <a href="/snack/{{ snack.name | slugify | url }}">{{snack.name}}</a>
     </div>
     <p class="c-meta c-simple-snack-item__meta">{{ snack.typeOfSnack.fields.type }} from {{ snack.countryOfOrigin.fields.countryName }}</p>
     {% include 'rating.njk' %}

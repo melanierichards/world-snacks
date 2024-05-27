@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/melanierichards/world-snacks#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^2.0.1",
     "@contentful/rich-text-html-renderer": "^15.11.1",
     "contentful": "^9.1.12",
     "dotenv": "^16.0.0",

@@ -16,11 +16,11 @@
           {% if context == 'snack' %}
             <span>Older review</span>
           {% elseif context == 'country'%}
-            {% set nextSlug = pagination.href.next | slug | replace('country', '') %}
+            {% set nextSlug = pagination.href.next | slugify | replace('country', '') %}
             {% set nextName = nextSlug | replace('-', ' ') %}
             <span>{{ nextName }}</span>
           {% elseif context == 'type' %}
-            {% set nextSlug = pagination.href.next | slug | replace('type', '') %}
+            {% set nextSlug = pagination.href.next | slugify | replace('type', '') %}
             {% set nextWithAmp = nextSlug | replace('-and-', '-&-') %}
             {% set nextName = nextWithAmp | replace('-', ' ') %}
             <span>{{ nextName }}</span>
@@ -34,11 +34,11 @@
           {% if context == 'snack' %}
             <span>Newer review</span>
           {% elseif context == 'country' %}
-            {% set prevSlug = pagination.href.previous | slug | replace('country', '') %}
+            {% set prevSlug = pagination.href.previous | slugify | replace('country', '') %}
             {% set prevName = prevSlug | replace('-', ' ') %}
             <span>{{ prevName }}</span>
           {% elseif context == 'type' %}
-            {% set prevSlug = pagination.href.previous | slug | replace('type', '') %}
+            {% set prevSlug = pagination.href.previous | slugify | replace('type', '') %}
             {% set prevWithAmp = prevSlug | replace('-and-', '-&-') %}
             {% set prevName = prevWithAmp | replace('-', ' ') %}
             <span>{{ prevName }}</span>

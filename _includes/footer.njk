@@ -25,7 +25,7 @@
           <ul class="u-simple-list | c-browse-by-list c-browse-by-list--countries">
             {% for country in countries %}
               <li class="c-browse-by-list__item">
-                <a class="c-browse-by-list__link" href="/country/{{ country.countryName | slug }}/">
+                <a class="c-browse-by-list__link" href="/country/{{ country.countryName | slugify }}/">
                   <span class="c-browse-by-list__emoji" aria-hidden="true">{{ country.emoji }}</span>
                   <span class="c-browse-by-list__name">{{ country.countryName }}</span>
                 </a>
@@ -38,7 +38,7 @@
           <ul class="u-simple-list | c-browse-by-list">
             {% for type in types %}
               <li class="c-browse-by-list__item">
-                <a class="c-browse-by-list__link" href="/type/{{ type.type | slug }}/">
+                <a class="c-browse-by-list__link" href="/type/{{ type.type | slugify }}/">
                   <span class="c-browse-by-list__emoji" aria-hidden="true">{{ type.emoji }}</span>
                   <span class="c-browse-by-list__name">{{ type.type }}</span>
                 </a>

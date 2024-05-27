@@ -4,7 +4,7 @@ pagination:
   size: 1
   alias: type
   addAllPagesToCollections: true
-permalink: "/type/{{ type.type | slug }}/"
+permalink: "/type/{{ type.type | slugify }}/"
 tags: "type"
 layout: layouts/type.njk
 context: type

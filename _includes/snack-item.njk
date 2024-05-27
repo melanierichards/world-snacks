@@ -21,7 +21,7 @@
   <div class="c-snack-item__info">
     {% if context != 'snack' %}
       <h3 class="h2">
-        <a href="/snack/{{ snack.name | slug | url }}">{{ snack.name }}</a>
+        <a href="/snack/{{ snack.name | slugify | url }}">{{ snack.name }}</a>
       </h3>
     {% endif %}
 

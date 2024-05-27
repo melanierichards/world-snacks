@@ -4,7 +4,7 @@ pagination:
   size: 1
   alias: snack
   addAllPagesToCollections: true
-permalink: "/snack/{{ snack.name | slug }}/"
+permalink: "/snack/{{ snack.name | slugify }}/"
 tags: "snack"
 layout: layouts/snack.njk
 context: snack
